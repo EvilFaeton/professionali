@@ -1,5 +1,17 @@
-require "professionali/version"
-
 module Professionali
-  # Your code goes here...
+
+  class << self
+    attr_accessor :token
+
+    def configure
+      yield self
+      true
+    end
+  end
+
+  autoload :Config,     "professionali/config"
+  autoload :Version,    "professionali/version"
+  autoload :Mash,       "professionali/mash"
+  autoload :Errors,     "professionali/errors"
+  autoload :Client,     "professionali/client"
 end

@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Professionali::VERSION
   spec.authors       = ["Sergey Efremov"]
   spec.email         = ["efremov.sergey@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = "Ruby wrapper for Professionali's API"
+  spec.summary       = "Ruby wrapper for Professionali's API"
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -18,6 +18,9 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency 'multi_json'
+  spec.add_dependency 'rest-client'
+  spec.add_dependency 'hashie'
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end
