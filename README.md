@@ -1,6 +1,6 @@
 # Professionali
 
-TODO: Write a gem description
+It's ruby wrapper for [Professionali](http://dev.professionali.ru)'s API.
 
 ## Installation
 
@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a client by providing access token:
+    
+    client = Professionali::Client.new token
+    
+Then just use same bindings as in API documentation. Examples:
+
+    client.users.get("me", "id,firstname,lastname,name,birthday,gender,avatar_big,link,languages")
+    client.users.schools("me")
+    client.search.get('Ruby')
+    
+Responce retunred as Hashie::Mash.
+    
+    
 
 ## Contributing
 
