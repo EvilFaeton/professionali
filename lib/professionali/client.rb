@@ -1,5 +1,6 @@
 require 'rest_client'
-require 'professionali/api/enterprise'
+require 'professionali/api_core'
+require 'professionali/api/enterprises'
 require 'professionali/api/groups'
 require 'professionali/api/invites'
 require 'professionali/api/messages'
@@ -20,8 +21,8 @@ module Professionali
       @token = token
     end
 
-    def enterprise
-      @cl_enterprise ||= Professionali::Api::Enterprise.new(@token)
+    def enterprises
+      @cl_enterprises ||= Professionali::Api::Enterprises.new(@token)
     end
 
     def groups

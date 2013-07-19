@@ -1,8 +1,8 @@
 module Professionali
   module Api
-    class Users < Professionali::Api
+    class Users < Professionali::ApiCore
       def get(ids = "me", options = { fields: "name,avatar_medium,birthday" })
-        api_call 'users/get.json', 'get', options.merge(ids: ids)
+        api_call 'users/get.json', 'get', options.merge("ids[]" => ids)
       end
 
       def activities(id = "me", options = {})
